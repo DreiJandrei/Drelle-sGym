@@ -1,0 +1,184 @@
+ 
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Why Drelle's Gym?</title>
+    <link href="Dashboard2.css" rel="stylesheet" type="text/css" />
+    <link href="Why2.css" rel="stylesheet" type="text/css" />
+    <style>
+        .why-hero {
+            min-height: 340px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            border-radius: 0 0 24px 24px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .why-hero-content {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 48px 32px 36px 32px;
+            background: rgba(24,24,24,0.85);
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+            backdrop-filter: blur(2px);
+        }
+        .why-hero h1 {
+            font-size: 2.8em;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+        }
+        .why-hero p {
+            font-size: 1.25em;
+            color: #e0e0e0;
+            margin-bottom: 0;
+        }
+        .why-story-section {
+            max-width: 800px;
+            margin: 0 auto 48px auto;
+            background: #232323;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+            padding: 36px 32px 28px 32px;
+            color: #f4f4f4;
+            text-align: left;
+        }
+        .why-story-section h2 {
+            color: #fff;
+            margin-bottom: 18px;
+            font-size: 2em;
+        }
+        .why-story-section p {
+            color: #ccc;
+            font-size: 1.13em;
+            line-height: 1.7;
+        }
+        .founder-signature {
+            margin-top: 24px;
+            font-style: italic;
+            color: #bdbdbd;
+            font-size: 1.08em;
+            text-align: right;
+        }
+        .why-animated {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 1s cubic-bezier(.23,1.01,.32,1), transform 1s cubic-bezier(.23,1.01,.32,1);
+        }
+        .why-animated.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Responsive */
+        @media (max-width: 900px) {
+            .why-hero-content, .why-story-section {
+                padding: 24px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- Navigation Bar -->
+       <nav class="dashboard-nav">
+    <div class="nav-content">
+        <img src="drelle.png" alt="Drelle's Gym Logo" class="nav-logo" />
+        <ul>
+            <li><a href="index.html" class="nav-link">Membership</a></li>
+            <li><a href="Why.html" class="nav-link active">Why Drelle's Gym</a></li>
+            <li><a href="Testimonials.html" class="nav-link">Testimonials</a></li>
+            <li><a href="index.html#cta" class="nav-link">Join</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+        <!-- Hero Section -->
+        <div class="why-hero why-animated" style="background: linear-gradient(rgba(24,24,24,0.85), rgba(24,24,24,0.85)), url('why.jpg') center/cover no-repeat;">
+            <div class="why-hero-content">
+                <h1>Why Drelle's Gym?</h1>
+                <p>
+                    More than a gym—Drelle’s is a community, a story, and a commitment to your transformation.
+                </p>
+            </div>
+        </div>
+
+        <!-- Background Story Section -->
+        <div class="why-story-section why-animated">
+            <h2>Our Story</h2>
+            <p>
+                Drelle’s Gym was born from a simple dream: to create a place where everyone—no matter their background, age, or fitness level—could feel empowered to become their best self. Our founder, Drelle, started this journey after overcoming his own health struggles and discovering the life-changing power of fitness and community.
+            </p>
+            <p>
+                What began as a small garage gym with a handful of friends has grown into a vibrant, welcoming space for hundreds of members. We believe in more than just reps and routines; we believe in real relationships, encouragement, and celebrating every victory—big or small.
+            </p>
+            <p>
+                At Drelle’s Gym, you’re not just joining a facility. You’re joining a family that lifts you up, challenges you, and supports you every step of the way.
+            </p>
+            <div class="founder-signature">
+                — Drelle, Founder
+            </div>
+        </div>
+
+        <!-- Unique Benefits Section -->
+        <div class="membership-benefits-section why-animated" id="benefits">
+            <h2>What Makes Us Unique?</h2>
+            <div class="benefits-dashboard">
+                <div class="benefit-card why-animated">
+                    <img src="top.jpg" alt="Top Equipment" />
+                    <h4>Top Equipment</h4>
+                    <p>Train with the latest machines and free weights for all fitness levels—always maintained and ready for you.</p>
+                </div>
+                <div class="benefit-card why-animated">
+                    <img src="classes.jpg" alt="Group Classes" />
+                    <h4>Group Classes</h4>
+                    <p>Enjoy unlimited access to a variety of fun and challenging group classes, from HIIT to yoga and more.</p>
+                </div>
+                <div class="benefit-card why-animated">
+                    <img src="results.jpg" alt="Real Results" />
+                    <h4>Real Results</h4>
+                    <p>Our members achieve their goals—see the difference for yourself with our proven programs and support.</p>
+                </div>
+                <div class="benefit-card why-animated">
+                    <img src="value.jpg" alt="Great Value" />
+                    <h4>Great Value</h4>
+                    <p>Flexible plans and affordable rates to fit your lifestyle and budget, with no hidden fees.</p>
+                </div>
+            </div>
+            <div class="benefits-cta why-animated">
+                <h3>Ready to transform your life?</h3>
+                <a href="Login.aspx#plans" class="hero-cta">See Membership Plans</a>
+            </div>
+        </div>
+
+        <script>
+            // Fade-in on scroll for .why-animated elements
+            function whyFadeInOnScroll() {
+                document.querySelectorAll('.why-animated').forEach(function (el) {
+                    var rect = el.getBoundingClientRect();
+                    if (rect.top < window.innerHeight - 60) {
+                        el.classList.add('visible');
+                    }
+                });
+            }
+            window.addEventListener('scroll', whyFadeInOnScroll);
+            window.addEventListener('DOMContentLoaded', whyFadeInOnScroll);
+
+            // Optional: Staggered animation for benefit cards
+            window.addEventListener('DOMContentLoaded', function () {
+                var cards = document.querySelectorAll('.benefit-card.why-animated');
+                cards.forEach(function (card, i) {
+                    setTimeout(function () {
+                        card.classList.add('visible');
+                    }, 400 + i * 200);
+                });
+            });
+        </script>
+    </form>
+</body>
+</html>

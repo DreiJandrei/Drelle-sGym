@@ -1,0 +1,210 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Drelle's Gym Membership</title>
+    <link href="Dashboard2.css" rel="stylesheet" type="text/css" />
+    <style>
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease, transform 1s cubic-bezier(.23,1.01,.32,1);
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .hero-animated {
+            opacity: 0;
+            transform: translateY(-30px);
+            transition: opacity 1s, transform 1s;
+        }
+        .hero-animated.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .plan-card {
+            cursor: pointer;
+        }
+        .plan-card.selected {
+            border: 2px solid #28a745 !important;
+            box-shadow: 0 8px 32px rgba(40,167,69,0.15) !important;
+            transform: scale(1.07) !important;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav class="dashboard-nav">
+            <div class="nav-content">
+                <img src="drelle.png" alt="Drelle's Gym Logo" class="nav-logo" />
+                <ul>
+                    <li><a href="index.html" class="nav-link">Membership</a></li>
+                    <li><a href="Why.html" class="nav-link">Why Drelle's Gym</a></li>
+                    <li><a href="Testimonials.html" class="nav-link">Testimonials</a></li>
+                    <li><a href="index.html#cta" class="nav-link">Join</a></li>
+                </ul>
+            </div>
+        </nav>
+
+<div class="membership-hero" style="background-image: url('gym.jpg');">
+    <div class="hero-overlay">
+        <h1 class="hero-animated">Unlock Your Potential</h1>
+        <h3 class="hero-animated" style="transition-delay:0.1s;">Transform your body and mind at Drelle's Gym</h3>
+        <p class="hero-animated" style="transition-delay:0.2s;">
+            Join today and experience world-class fitness, community, and support.
+        </p>
+        <ul class="hero-animated hero-benefits" style="transition-delay:0.3s;">
+            <li>✔️ 24/7 Access</li>
+            <li>✔️ Free Personal Training Session</li>
+            <li>✔️ Modern Equipment & Clean Facilities</li>
+            <li>✔️ Friendly, Supportive Community</li>
+        </ul>
+        <blockquote class="hero-animated hero-quote" style="transition-delay:0.35s;">
+            "The best gym experience I've ever had!" – <b>Happy Member</b>
+        </blockquote>
+        <a href="#plans" class="hero-cta hero-animated" style="transition-delay:0.4s;">View Membership Plans</a>
+    </div>
+</div>
+
+
+        <div class="membership-benefits-section fade-in" id="benefits">
+            <h2>Why Join Drelle's Gym?</h2>
+            <div class="benefits-row">
+                <div class="benefit">
+                    <img src="24.jpg" alt="24/7 Access" />
+                    <h4>24/7 Access</h4>
+                    <p>Work out whenever you want with round-the-clock access.</p>
+                </div>
+                <div class="benefit">
+                    <img src="benefit.jpg" alt="Expert Trainers" />
+                    <h4>Expert Trainers</h4>
+                    <p>Certified trainers to guide and motivate you every step.</p>
+                </div>
+                <div class="benefit">
+                    <img src="sup.jpg" alt="Community" />
+                    <h4>Supportive Community</h4>
+                    <p>Be part of a positive, encouraging fitness family.</p>
+                </div>
+                <div class="benefit">
+                    <img src="clean.jpg" alt="Clean Facilities" />
+                    <h4>Clean Facilities</h4>
+                    <p>Enjoy a spotless, safe, and modern workout environment.</p>
+                </div>
+            </div>
+        </div>
+
+     
+
+        <div class="membership-plans fade-in" id="plans">
+            <h2>Our Membership Plans</h2>
+            <div class="plans-row">
+                <div class="plan-card" tabindex="0">
+                    <img src="basic.jpg" alt="Basic Plan" class="plan-img" />
+                    <h3>Basic</h3>
+                    <div class="plan-price">$29<span>/month</span></div>
+                    <ul>
+                        <li>Unlimited gym access</li>
+                        <li>Locker room facilities</li>
+                        <li>1 guest pass/month</li>
+                    </ul>
+                    <a href="#" class="plan-btn">Join Basic</a>
+                </div>
+                <div class="plan-card featured" tabindex="0">
+                    <img src="premium.jpg" alt="Premium Plan" class="plan-img" />
+                    <h3>Premium</h3>
+                    <div class="plan-price">$49<span>/month</span></div>
+                    <ul>
+                        <li>All Basic features</li>
+                        <li>Unlimited group classes</li>
+                        <li>Free fitness assessment</li>
+                        <li>2 guest passes/month</li>
+                    </ul>
+                    <a href="#" class="plan-btn">Join Premium</a>
+                </div>
+                <div class="plan-card" tabindex="0">
+                    <img src="elite.jpg" alt="Elite Plan" class="plan-img" />
+                    <h3>Elite</h3>
+                    <div class="plan-price">$79<span>/month</span></div>
+                    <ul>
+                        <li>All Premium features</li>
+                        <li>Personal locker</li>
+                        <li>Priority class booking</li>
+                        <li>5 guest passes/month</li>
+                        <li>1 personal training session/month</li>
+                    </ul>
+                    <a href="#" class="plan-btn">Join Elite</a>
+                </div>
+            </div>
+        </div>
+          <div class="membership-cta fade-in" id="cta">
+      <h2>Ready to Start?</h2>
+      <p>Contact us or visit the club to get your free trial pass and tour!</p>
+      <a href="mailto:info@drellesgym.com" class="cta-btn">Contact Us</a>
+  </div>
+        <script>
+            
+            document.querySelectorAll('.nav-link, .hero-cta').forEach(function (link) {
+                link.addEventListener('click', function (e) {
+                    var href = this.getAttribute('href');
+                    if (href && href.startsWith('#')) {
+                        var target = document.querySelector(href);
+                        if (target) {
+                            e.preventDefault();
+                            window.scrollTo({
+                                top: target.offsetTop - 20,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+
+         
+            window.addEventListener('DOMContentLoaded', function () {
+                document.querySelectorAll('.hero-animated').forEach(function (el, i) {
+                    setTimeout(function () {
+                        el.classList.add('visible');
+                    }, 200 + i * 200);
+                });
+            });
+
+            function fadeInOnScroll() {
+                document.querySelectorAll('.fade-in').forEach(function (el) {
+                    var rect = el.getBoundingClientRect();
+                    if (rect.top < window.innerHeight - 60) {
+                        el.classList.add('visible');
+                    }
+                });
+            }
+            window.addEventListener('scroll', fadeInOnScroll);
+            window.addEventListener('DOMContentLoaded', fadeInOnScroll);
+
+            
+            document.querySelectorAll('.plan-card').forEach(function (card) {
+                card.addEventListener('click', function () {
+                    document.querySelectorAll('.plan-card').forEach(function (c) {
+                        c.classList.remove('selected');
+                    });
+                    card.classList.add('selected');
+                });
+                card.addEventListener('keypress', function (e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        card.click();
+                    }
+                });
+            });
+
+            
+            window.addEventListener('DOMContentLoaded', function () {
+                setTimeout(function () {
+                    var testimonial = document.getElementById('testimonial');
+                    if (testimonial) testimonial.classList.add('visible');
+                }, 1200);
+            });
+        </script>
+    </form>
+</body>
+</html>

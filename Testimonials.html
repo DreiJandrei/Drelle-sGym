@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Testimonials - Drelle's Gym</title>
+    <link href="Dashboard2.css" rel="stylesheet" type="text/css" />
+    <link href="Testimonials.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        
+        <nav class="dashboard-nav">
+            <div class="nav-content">
+                <img src="drelle.png" alt="Drelle's Gym Logo" class="nav-logo" />
+                <ul>
+                    <li><a href="index.html" class="nav-link">Membership</a></li>
+                    <li><a href="Why.html" class="nav-link">Why Drelle's Gym</a></li>
+                    <li><a href="Testimonials.html" class="nav-link active">Testimonials</a></li>
+                    <li><a href="index.html#cta" class="nav-link">Join</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        
+        <div class="testimonials-section">
+            <h2 class="testimonials-title testimonials-animated">What Our Members Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card testimonials-animated">
+                    <img src="member1.jpg" alt="Member 1" class="testimonial-img" />
+                    <blockquote>
+                        "Joining Drelle's Gym was the best decision I ever made. The trainers are amazing and the community is so supportive!"
+                    </blockquote>
+                    <div class="testimonial-author">— Christele Espiritu.</div>
+                </div>
+                <div class="testimonial-card testimonials-animated">
+                    <img src="member2.jpg" alt="Member 2" class="testimonial-img" />
+                    <blockquote>
+                        "I love the variety of classes and the clean, modern facilities. I actually look forward to working out now!"
+                    </blockquote>
+                    <div class="testimonial-author">— Jandrei Valderama</div>
+                </div>
+                <div class="testimonial-card testimonials-animated">
+                    <img src="member3.jpg" alt="Member 3" class="testimonial-img" />
+                    <blockquote>
+                        "Drelle's Gym helped me achieve my fitness goals. The encouragement from staff and members is unmatched."
+                    </blockquote>
+                    <div class="testimonial-author">— Allen Tionloc.</div>
+                </div>
+                <div class="testimonial-card testimonials-animated">
+                    <img src="member4.jpg" alt="Member 4" class="testimonial-img" />
+                    <blockquote>
+                        "The flexible plans and 24/7 access fit perfectly with my busy schedule. Highly recommended!"
+                    </blockquote>
+                    <div class="testimonial-author">— Kyla Espiritu</div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+           
+            function testimonialsFadeInOnScroll() {
+                document.querySelectorAll('.testimonials-animated').forEach(function (el) {
+                    var rect = el.getBoundingClientRect();
+                    if (rect.top < window.innerHeight - 60) {
+                        el.classList.add('visible');
+                    }
+                });
+            }
+            window.addEventListener('scroll', testimonialsFadeInOnScroll);
+            window.addEventListener('DOMContentLoaded', testimonialsFadeInOnScroll);
+
+            
+            window.addEventListener('DOMContentLoaded', function () {
+                var cards = document.querySelectorAll('.testimonial-card.testimonials-animated');
+                cards.forEach(function (card, i) {
+                    setTimeout(function () {
+                        card.classList.add('visible');
+                    }, 300 + i * 200);
+                });
+            });
+        </script>
+    </form>
+</body>
+</html>
