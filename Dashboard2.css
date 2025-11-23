@@ -397,35 +397,105 @@ img, .plan-img, .benefit img, .testimonial-img {
     }
 
 /* Responsive Design */
-@media (max-width: 900px) {
+/* --- UPDATED RESPONSIVE DESIGN --- */
+
+/* Tablet (Medium Screens) */
+@media (max-width: 1024px) {
+    .nav-content {
+        padding: 0 20px; /* Add padding so content doesn't touch edges */
+    }
+
+    .dashboard-nav ul {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .nav-logo {
+        left: 20px; /* Adjust logo position so it doesn't fall off screen */
+    }
+}
+
+/* Mobile (Small Screens) */
+@media (max-width: 768px) {
+    /* 1. Fix Navigation Bar */
+    .dashboard-nav {
+        height: auto; /* Allow nav to grow vertically */
+        padding: 10px 0;
+    }
+
+    .nav-content {
+        flex-direction: column; /* Stack items vertically */
+        height: auto;
+        padding-bottom: 10px;
+    }
+
+    .nav-logo {
+        position: static; /* Remove absolute positioning */
+        transform: none;
+        margin-bottom: 10px; /* Space below logo */
+        height: 40px;
+    }
+
+    .dashboard-nav ul {
+        flex-wrap: wrap; /* Allow links to wrap if needed */
+        justify-content: center;
+        padding: 0;
+        gap: 10px; /* Space between links */
+    }
+
+    .dashboard-nav li {
+        margin: 0;
+    }
+
+    .dashboard-nav a {
+        padding: 8px 16px; /* Smaller touch targets */
+        font-size: 0.95em;
+        background: #333; /* Add background so they look like buttons */
+        border-radius: 4px;
+    }
+
+    /* 2. Fix Hero Section */
+    .membership-hero {
+        min-height: 400px; /* Smaller height for mobile */
+    }
+
+    .hero-overlay {
+        width: 90%; /* Use percentage width */
+        padding: 30px 20px;
+        margin-top: 20px; /* Add margin if nav covers it */
+    }
+
+    .hero-overlay h1 {
+        font-size: 2em; /* Smaller font */
+    }
+
+    /* 3. Fix Cards (Plans & Benefits) */
     .plans-row, .benefits-row {
         flex-direction: column;
         align-items: center;
     }
 
     .plan-card, .benefit {
-        max-width: 90%;
-        min-width: 220px;
+        width: 100%; /* Use full width */
+        max-width: 320px; /* Limit max width */
+        margin-bottom: 20px;
     }
-
-    .nav-content {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .dashboard-nav ul {
-        width: 100%;
-        justify-content: flex-start;
-    }
-
+    
+    /* 4. Fix Testimonials */
     .membership-testimonial {
         flex-direction: column;
         text-align: center;
-        padding: 24px 12px;
+        padding: 30px 20px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
     }
-
-    .benefit img,
+    
     .testimonial-img {
-        filter: none !important;
+        margin-bottom: 15px;
+    }
+    
+    .membership-testimonial blockquote {
+        font-size: 1em;
     }
 }

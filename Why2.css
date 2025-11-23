@@ -210,18 +210,41 @@ img, .plan-img, .benefit img, .testimonial-img, .benefit-card img {
 }
 
 /* Responsive Design */
-@media (max-width: 900px) {
-    .why-hero-content, .why-story-section, .membership-benefits-section {
-        padding: 24px 8px;
-    }
-
-    .benefits-dashboard {
-        grid-template-columns: 1fr;
-        gap: 18px;
-    }
-
+@media (max-width: 768px) {
+    /* Hero Fixes */
     .why-hero {
-        min-height: 220px;
-        border-radius: 0 0 18px 18px;
+        min-height: 250px;
+        background-position: center top; /* Focus image */
+    }
+
+    .why-hero-content {
+        width: 90%;
+        padding: 30px 20px;
+    }
+
+    .why-hero h1 {
+        font-size: 2em;
+    }
+
+    /* Story Section Fixes */
+    .why-story-section {
+        width: 90%; /* Prevent it touching edges */
+        padding: 30px 20px;
+        margin-bottom: 30px;
+    }
+    
+    .why-story-section h2 {
+        font-size: 1.8em;
+    }
+
+    /* Hide the decorative circle on mobile if it causes scrolling issues */
+    .why-story-section:before {
+        display: none; 
+    }
+
+    /* Benefits Grid */
+    .benefits-dashboard {
+        grid-template-columns: 1fr; /* Single column stack */
+        gap: 20px;
     }
 }

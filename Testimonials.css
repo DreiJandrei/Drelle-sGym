@@ -78,18 +78,24 @@ img, .benefit img, .testimonial-img {
     margin-top: 8px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     .testimonials-section {
-        padding: 24px 8px;
+        padding: 30px 15px; /* Reduce padding */
+        margin-top: 20px;
+        border-radius: 12px;
+    }
+
+    .testimonials-title {
+        font-size: 1.8em; /* Smaller heading */
+        margin-bottom: 25px;
     }
 
     .testimonials-grid {
-        grid-template-columns: 1fr;
-        gap: 18px;
+        grid-template-columns: 1fr; /* Force single column */
+        gap: 24px;
     }
-
-    .benefit img,
-    .testimonial-img {
-        filter: none !important;
+    
+    .testimonial-card {
+        padding: 24px 15px;
     }
 }
