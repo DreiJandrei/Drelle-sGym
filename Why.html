@@ -1,185 +1,208 @@
- 
 <!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Why Drelle's Gym?</title>
-    <link href="Dashboard2.css" rel="stylesheet" type="text/css" />
-    <link href="Why2.css" rel="stylesheet" type="text/css" />
-    <style>
-        .why-hero {
-            min-height: 340px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: #fff;
-            border-radius: 0 0 24px 24px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.25);
-            margin-bottom: 40px;
-            position: relative;
-        }
-        .why-hero-content {
-            max-width: 700px;
-            margin: 0 auto;
-            padding: 48px 32px 36px 32px;
-            background: rgba(24,24,24,0.85);
-            border-radius: 18px;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.18);
-            backdrop-filter: blur(2px);
-        }
-        .why-hero h1 {
-            font-size: 2.8em;
-            margin-bottom: 12px;
-            letter-spacing: 1px;
-        }
-        .why-hero p {
-            font-size: 1.25em;
-            color: #e0e0e0;
-            margin-bottom: 0;
-        }
-        .why-story-section {
-            max-width: 800px;
-            margin: 0 auto 48px auto;
-            background: #232323;
-            border-radius: 16px;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.18);
-            padding: 36px 32px 28px 32px;
-            color: #f4f4f4;
-            text-align: left;
-        }
-        .why-story-section h2 {
-            color: #fff;
-            margin-bottom: 18px;
-            font-size: 2em;
-        }
-        .why-story-section p {
-            color: #ccc;
-            font-size: 1.13em;
-            line-height: 1.7;
-        }
-        .founder-signature {
-            margin-top: 24px;
-            font-style: italic;
-            color: #bdbdbd;
-            font-size: 1.08em;
-            text-align: right;
-        }
-        .why-animated {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: opacity 1s cubic-bezier(.23,1.01,.32,1), transform 1s cubic-bezier(.23,1.01,.32,1);
-        }
-        .why-animated.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        /* Responsive */
-        @media (max-width: 900px) {
-            .why-hero-content, .why-story-section {
-                padding: 24px 10px;
-            }
-        }
-    </style>
+    <title>Why Drelle's Gym</title>
+    <meta name="description" content="The story behind Drelle's Gym, from a garage gym with friends to a community of hundreds.">
+    <meta name="theme-color" content="#0a0a0b">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-    <form id="form1" runat="server">
-        <!-- Navigation Bar -->
-       <nav class="dashboard-nav">
-    <div class="nav-content">
-        <img src="drelle.png" alt="Drelle's Gym Logo" class="nav-logo" />
-        <ul>
-            <li><a href="index.html" class="nav-link">Membership</a></li>
-            <li><a href="Why.html" class="nav-link active">Why Drelle's Gym</a></li>
-            <li><a href="Testimonials.html" class="nav-link">Testimonials</a></li>
-            <li><a href="index.html#cta" class="nav-link">Join</a></li>
-        </ul>
-    </div>
-</nav>
 
-
-        <!-- Hero Section -->
-        <div class="why-hero why-animated" style="background: linear-gradient(rgba(24,24,24,0.85), rgba(24,24,24,0.85)), url('why.jpg') center/cover no-repeat;">
-            <div class="why-hero-content">
-                <h1>Why Drelle's Gym?</h1>
-                <p>
-                    More than a gym—Drelle’s is a community, a story, and a commitment to your transformation.
-                </p>
+    <header class="site-nav">
+        <div class="container nav-inner">
+            <a href="index.html" class="nav-logo" aria-label="Drelle's Gym home"><img src="drelle.png" alt="Drelle's Gym"></a>
+            <nav aria-label="Main">
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Membership</a></li>
+                    <li><a href="Why.html" class="active" aria-current="page">Why Drelle's</a></li>
+                    <li><a href="Testimonials.html">Testimonials</a></li>
+                    <li><a href="index.html#faq">FAQ</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <div data-nav-cta></div>
+                <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+                    <span></span><span></span><span></span>
+                </button>
             </div>
         </div>
+    </header>
 
-        <!-- Background Story Section -->
-        <div class="why-story-section why-animated">
-            <h2>Our Story</h2>
-            <p>
-                Drelle’s Gym was born from a simple dream: to create a place where everyone—no matter their background, age, or fitness level—could feel empowered to become their best self. Our founder, Drelle, started this journey after overcoming his own health struggles and discovering the life-changing power of fitness and community.
-            </p>
-            <p>
-                What began as a small garage gym with a handful of friends has grown into a vibrant, welcoming space for hundreds of members. We believe in more than just reps and routines; we believe in real relationships, encouragement, and celebrating every victory—big or small.
-            </p>
-            <p>
-                At Drelle’s Gym, you’re not just joining a facility. You’re joining a family that lifts you up, challenges you, and supports you every step of the way.
-            </p>
-            <div class="founder-signature">
-                — Drelle, Founder
+    <main>
+        <!-- Hero -->
+        <section class="page-hero">
+            <div class="hero-bg" style="background-image: url('why.jpg');" aria-hidden="true"></div>
+            <div class="container">
+                <span class="eyebrow reveal">Why Drelle's Gym</span>
+                <h1 class="reveal" style="--delay: .08s">More than<br>a <span class="accent">gym</span></h1>
+                <p class="reveal" style="--delay: .16s">Drelle's is a community, a story, and a commitment to your transformation.</p>
+            </div>
+        </section>
+
+        <!-- Story -->
+        <section class="section">
+            <div class="container story-grid">
+                <div class="story-text reveal">
+                    <span class="eyebrow">Our story</span>
+                    <h2 class="section-title">Built from a<br>simple dream</h2>
+                    <p>Drelle's Gym was born from a simple dream: to create a place where everyone, no matter their background, age, or fitness level, could feel empowered to become their best self. Our founders, Christele Espiritu and Franz Jandrei Valderama, started this journey after discovering the life-changing power of fitness and community for themselves.</p>
+                    <p>What began as a small garage gym with a handful of friends has grown into a vibrant, welcoming space for hundreds of members. We believe in more than just reps and routines. We believe in real relationships, encouragement, and celebrating every victory, big or small.</p>
+                    <p>At Drelle's Gym, you're not just joining a facility. You're joining a family that lifts you up, challenges you, and supports you every step of the way.</p>
+                    <div class="signature">
+                        <div class="founder">
+                            <span class="signature-mark" aria-hidden="true">CE</span>
+                            <div>
+                                <div class="person-name">Christele Espiritu</div>
+                                <div class="person-meta">Co-founder</div>
+                            </div>
+                        </div>
+                        <div class="founder">
+                            <span class="signature-mark" aria-hidden="true">FJ</span>
+                            <div>
+                                <div class="person-name">Franz Jandrei Valderama</div>
+                                <div class="person-meta">Co-founder</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <ol class="timeline reveal" style="--delay: .1s" aria-label="Milestones">
+                    <li>
+                        <div class="timeline-year">2018</div>
+                        <h3>The garage days</h3>
+                        <p>A handful of friends, a few barbells, and one big idea.</p>
+                    </li>
+                    <li>
+                        <div class="timeline-year">2020</div>
+                        <h3>Our first real home</h3>
+                        <p>We moved into a proper facility and opened the doors to everyone.</p>
+                    </li>
+                    <li>
+                        <div class="timeline-year">2022</div>
+                        <h3>Classes &amp; coaching</h3>
+                        <p>Certified trainers joined the team and group classes took off.</p>
+                    </li>
+                    <li>
+                        <div class="timeline-year">2023</div>
+                        <h3>Open around the clock</h3>
+                        <p>24/7 keycard access so you can train on your schedule.</p>
+                    </li>
+                    <li>
+                        <div class="timeline-year">Today</div>
+                        <h3>800+ members strong</h3>
+                        <p>Still the same family feel, just a lot more of us.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- What makes us unique -->
+        <section class="section section-alt" id="unique">
+            <div class="container">
+                <div class="section-head reveal">
+                    <span class="eyebrow">What makes us unique</span>
+                    <h2 class="section-title">Everything you need,<br>nothing you don't</h2>
+                </div>
+                <div class="feature-grid">
+                    <article class="feature-card reveal">
+                        <span class="feature-num">01</span>
+                        <div class="feature-icon" data-icon="dumbbell"></div>
+                        <h3>Top Equipment</h3>
+                        <p>The latest machines and free weights for every level, always maintained and ready for you.</p>
+                    </article>
+                    <article class="feature-card reveal" style="--delay: .08s">
+                        <span class="feature-num">02</span>
+                        <div class="feature-icon" data-icon="calendar"></div>
+                        <h3>Group Classes</h3>
+                        <p>Fun, challenging classes all week long, from HIIT and boxing to yoga and mobility.</p>
+                    </article>
+                    <article class="feature-card reveal" style="--delay: .16s">
+                        <span class="feature-num">03</span>
+                        <div class="feature-icon" data-icon="trending"></div>
+                        <h3>Real Results</h3>
+                        <p>Our members hit their goals with proven programs and coaches who track your progress.</p>
+                    </article>
+                    <article class="feature-card reveal" style="--delay: .24s">
+                        <span class="feature-num">04</span>
+                        <div class="feature-icon" data-icon="wallet"></div>
+                        <h3>Great Value</h3>
+                        <p>Flexible plans and affordable rates that fit your lifestyle, with no hidden fees.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Founder quote -->
+        <section class="section">
+            <div class="container">
+                <figure class="big-quote reveal" style="margin: 0 auto;">
+                    <blockquote>Fitness changed our lives. Drelle's exists so it can do the same for you.</blockquote>
+                    <cite>Christele Espiritu &amp; Franz Jandrei Valderama, Co-founders</cite>
+                </figure>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="section" style="padding-top: 0;">
+            <div class="container">
+                <div class="cta-band reveal">
+                    <div>
+                        <h2>Ready to transform your life?</h2>
+                        <p>Find the membership that fits you and start training this week.</p>
+                    </div>
+                    <div class="cta-actions">
+                        <a href="index.html#plans" class="btn btn-light btn-lg">See membership plans</a>
+                        <button type="button" class="btn btn-outline-light btn-lg" data-open-signup data-guest-only>Join now</button>
+                        <button type="button" class="btn btn-outline-light btn-lg" data-open-pass data-member-only hidden>View my pass</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="drelle.png" alt="Drelle's Gym">
+                    <p>More than a gym. A community committed to helping you become your best self.</p>
+                </div>
+                <div>
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="index.html#plans">Membership</a></li>
+                        <li><a href="Why.html">Why Drelle's</a></li>
+                        <li><a href="Testimonials.html">Testimonials</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Hours</h4>
+                    <ul>
+                        <li>Gym floor: 24/7</li>
+                        <li>Front desk: 6am – 10pm</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:franzjandrei50@gmail.com">franzjandrei50@gmail.com</a></li>
+                        <li><a href="index.html#join" data-open-signup>Become a member</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; <span data-year>2026</span> Drelle's Gym. All rights reserved.</span>
+                <span>Portfolio project: the membership sign-up is a demo and no real payments are processed.</span>
             </div>
         </div>
+    </footer>
 
-        <!-- Unique Benefits Section -->
-        <div class="membership-benefits-section why-animated" id="benefits">
-            <h2>What Makes Us Unique?</h2>
-            <div class="benefits-dashboard">
-                <div class="benefit-card why-animated">
-                    <img src="top.jpg" alt="Top Equipment" />
-                    <h4>Top Equipment</h4>
-                    <p>Train with the latest machines and free weights for all fitness levels—always maintained and ready for you.</p>
-                </div>
-                <div class="benefit-card why-animated">
-                    <img src="classes.jpg" alt="Group Classes" />
-                    <h4>Group Classes</h4>
-                    <p>Enjoy unlimited access to a variety of fun and challenging group classes, from HIIT to yoga and more.</p>
-                </div>
-                <div class="benefit-card why-animated">
-                    <img src="results.jpg" alt="Real Results" />
-                    <h4>Real Results</h4>
-                    <p>Our members achieve their goals—see the difference for yourself with our proven programs and support.</p>
-                </div>
-                <div class="benefit-card why-animated">
-                    <img src="value.jpg" alt="Great Value" />
-                    <h4>Great Value</h4>
-                    <p>Flexible plans and affordable rates to fit your lifestyle and budget, with no hidden fees.</p>
-                </div>
-            </div>
-            <div class="benefits-cta why-animated">
-                <h3>Ready to transform your life?</h3>
-                <a href="Login.aspx#plans" class="hero-cta">See Membership Plans</a>
-            </div>
-        </div>
-
-        <script>
-            // Fade-in on scroll for .why-animated elements
-            function whyFadeInOnScroll() {
-                document.querySelectorAll('.why-animated').forEach(function (el) {
-                    var rect = el.getBoundingClientRect();
-                    if (rect.top < window.innerHeight - 60) {
-                        el.classList.add('visible');
-                    }
-                });
-            }
-            window.addEventListener('scroll', whyFadeInOnScroll);
-            window.addEventListener('DOMContentLoaded', whyFadeInOnScroll);
-
-            // Optional: Staggered animation for benefit cards
-            window.addEventListener('DOMContentLoaded', function () {
-                var cards = document.querySelectorAll('.benefit-card.why-animated');
-                cards.forEach(function (card, i) {
-                    setTimeout(function () {
-                        card.classList.add('visible');
-                    }, 400 + i * 200);
-                });
-            });
-        </script>
-    </form>
+    <script src="main.js"></script>
 </body>
 </html>
